@@ -1,0 +1,36 @@
+.summary_score {
+    font-family: 'openSans';
+    font-size: 15px;
+    line-height: 25px;
+    font-weight:700;
+    color: #3C366B;
+    top: 4.5rem;
+    z-index: 500;
+    position: relative;
+    animation: bounce 1s linear 4s 3;
+}
+
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+
+      transform: translate3d(0, -20px, 0);
+    }
+
+    70% {
+
+      transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+      transform: translate3d(0, -4px, 0);
+    }
+}
+

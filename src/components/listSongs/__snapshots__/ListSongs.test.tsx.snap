@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component ListSongs match snapshot 1`] = `
+<ForwardRef(List)
+  className="makeStyles-root-1"
+  classes={
+    Object {
+      "dense": "MuiList-dense",
+      "padding": "MuiList-padding",
+      "root": "MuiList-root",
+      "subheader": "MuiList-subheader",
+    }
+  }
+  dense={true}
+>
+  <div
+    className="flex justify-center"
+  >
+    <div
+      className="w-full"
+    >
+      <a
+        href="https://open.spotify.com/track/60Pwcnt2y9ML9VP4gwrcxm"
+        key="0"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <WithStyles(ForwardRef(ListItem))
+          button={true}
+        >
+          <WithStyles(ForwardRef(ListItemAvatar))>
+            <WithStyles(ForwardRef(Avatar))
+              alt="Cher"
+              src="https://i.scdn.co/image/ab67616d000048511cafae5c9e0e809317d46a31"
+            />
+          </WithStyles(ForwardRef(ListItemAvatar))>
+          <WithStyles(ForwardRef(ListItemText))
+            primary={
+              <span
+                className="text-xl text-pink-700 font-alba"
+              >
+                Cher
+              </span>
+            }
+            secondary={
+              <span
+                className="text-sm text-white"
+              >
+                Walking in Memphis
+              </span>
+            }
+          />
+        </WithStyles(ForwardRef(ListItem))>
+      </a>
+      <a
+        href="https://open.spotify.com/track/24fQpRwKFkC3Fe8QtvvrNw"
+        key="1"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <WithStyles(ForwardRef(ListItem))
+          button={true}
+        >
+          <WithStyles(ForwardRef(ListItemAvatar))>
+            <WithStyles(ForwardRef(Avatar))
+              alt="Take That"
+              src="https://i.scdn.co/image/ab67616d000048514d30d662454d239ed12fe963"
+            />
+          </WithStyles(ForwardRef(ListItemAvatar))>
+          <WithStyles(ForwardRef(ListItemText))
+            primary={
+              <span
+                className="text-xl text-pink-700 font-alba"
+              >
+                Take That
+              </span>
+            }
+            secondary={
+              <span
+                className="text-sm text-white"
+              >
+                Back for Good - Radio Mix
+              </span>
+            }
+          />
+        </WithStyles(ForwardRef(ListItem))>
+      </a>
+    </div>
+  </div>
+</ForwardRef(List)>
+`;

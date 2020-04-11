@@ -1,0 +1,103 @@
+.btn {
+  position: relative;
+  padding: 12px 30px;
+  margin: 0px 10px 10px 0px;
+  border-radius: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  border: 0;
+  background-color: #97266D;;
+  border-bottom: 5px solid #702459;
+  text-shadow: 0px -2px #8C4A6F;
+
+  &:active {
+    transform: translate(0px,5px);
+    border-bottom: 1px solid;
+    outline: none;
+    border: none;
+  }
+
+  &:focus {
+    outline: none;
+    transition: .5s;
+  }
+}
+
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: transparent;
+  color: #666666;
+  &:hover {
+    color: #666666;
+    background-color: transparent;
+    border: 1px solid #999999;
+  }
+
+  &.btnGoodAnswer {
+    background-color: bg-orange-500;
+    &:hover {
+      background-color: bg-orange-500;
+    }
+  }
+}
+
+.logout {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+    &:active {
+       outline: none;
+       border: none;
+    }
+
+    &:after {
+      transition: all 0.3s ease-in-out;
+      background: #ED8936;
+      color: #453659;
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      font-family: 'alba';
+      font-weight: 600;
+      font-size: 1rem;
+      content: "logout";
+      position: absolute;
+      margin: auto;
+      line-height: 67px;
+      text-align: center;
+      right:-210%;
+      top: 0px;
+      left:0px;
+    }
+
+    &:hover {
+      &:after {
+        right: 0%;
+      }
+    }
+}
+
+.btn--shake {
+  &:active {
+    transform: none;
+    background: transparent;
+    color: #ECC94B;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-name: wrongAnswer;
+  }
+}
+
+@keyframes wrongAnswer {
+  0%   {transform:translate(0px);}
+  33%  {transform:translate(17px);}
+  66%  {transform:translate(-17px);}
+  100% {transform:translate(0px);}
+}

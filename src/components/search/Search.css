@@ -1,0 +1,30 @@
+.search {
+  margin: 20px 0;
+
+  ::placeholder {
+    color: #CBD5E0;
+
+  }
+
+    input {
+      text-align: left;
+      border-radius: 6rem;
+      border: 3px solid #ED8936;
+      background-color: transparent;
+      padding: 10px 20px;
+      width: 100%;
+      transition: .5s;
+      min-width: 400px;
+      @apply bg-indigo-900;
+      &:focus {
+        outline: none;
+        border-color: #FED7D7;
+        color: #FED7D7;
+        transition: .5s;
+      }
+
+  }
+  input:not(:focus) {
+    color: #ED8936;
+  }
+}

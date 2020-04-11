@@ -1,0 +1,4 @@
+body {
+    overflow: auto;
+    @apply bg-indigo-900;
+}

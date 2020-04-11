@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component App match snapshot 1`] = `
+<Fragment>
+  <Navigation />
+  <Switch>
+    <Route
+      component={[Function]}
+      path="/game/:playlistID"
+    />
+    <Route
+      component={[Function]}
+      path="/summary"
+    />
+    <Route
+      component={[Function]}
+      path="/scores"
+    />
+    <Route
+      component={[Function]}
+      path="/playlist"
+    />
+    <Redirect
+      to="/playlist"
+    />
+  </Switch>
+</Fragment>
+`;
+
+exports[`component App renders Login token is not defined 1`] = `
+<Fragment>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Redirect
+    to="/"
+  />
+</Fragment>
+`;

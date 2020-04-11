@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Login match snapshot 1`] = `
+<div
+  className="bg-indigo-900 h-screen w-screen flex justify-center pt-2"
+>
+  <div
+    className="flex flex-col justify-center"
+  >
+    <h1
+      className="font-albaSuper text-center text-orange-500 text-5xl pb-4"
+    >
+      guess the 
+      <br />
+      so
+      <span>
+        ng
+      </span>
+       game
+    </h1>
+    <Image
+      alt="vinyl player"
+      size="large"
+      src={
+        Object {
+          "ReactComponent": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+          "__esModule": true,
+          "default": "dj-mixer.svg",
+        }
+      }
+    />
+    <Button
+      href={
+        Object {
+          "path": "https://accounts.spotify.com/authorize?client_id=9e408fab4a8c4d6096b013b572a8ab1f&redirect_uri=http://localhost:3000/playlist&scope=user-top-read%20user-read-currently-playing%20user-read-playback-state&response_type=token&show_dialog=true",
+        }
+      }
+      spacing={
+        Object {
+          "mt": "10",
+        }
+      }
+    >
+      login to spotify
+    </Button>
+  </div>
+</div>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component button match snapshot 1`] = `
+<button
+  className="btn font-alba"
+>
+  test
+</button>
+`;
+
+exports[`component button match snapshot when href 1`] = `
+<a
+  className="btn mt-10 font-alba"
+  href="/test"
+  target="_blank"
+>
+  test
+</a>
+`;
+
+exports[`component button match snapshot with mainBtn class 1`] = `
+<button
+  className="btn--game bg-transparent focus:outline-none hover:bg-orange-500 w-full md:w-5/12 text-orange-500 font-semibold hover:text-indigo-900 py-2 border border-orange-500 hover:border-transparent rounded m-1 mt-4"
+>
+  test
+</button>
+`;

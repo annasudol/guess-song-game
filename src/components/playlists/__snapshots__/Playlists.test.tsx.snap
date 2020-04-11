@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Playlists match snapshot when state returns playlist 1`] = `
+<div
+  className="container overflow-x-hidden"
+>
+  <Search />
+  <div
+    className="flex w-full justify-between flex-wrap h-auto mt-2 mb-6"
+  >
+    <PlaylistItem
+      key="playListData"
+      playlist={
+        Object {
+          "playListData": Object {
+            "37i9dQZF1DXc3KygMa1OE7": Object {
+              "image": "https://pl.scdn.co/images/pl/default/0feef15b6deb4d264d55bd916bf7cacf8bc26dcc",
+              "name": "80s Love Songs",
+              "tracks": Array [
+                Object {
+                  "artist": "Chicago",
+                  "externalUrl": "https://open.spotify.com/track/7boKWlaNVmrhJdX8IbzUdD",
+                  "img": "https://i.scdn.co/image/ab67616d0000485136dfd7ab3a0b4f39908c2a04",
+                  "songUrl": "https://p.scdn.co/mp3-preview/9f4d173dc3f7b4e1d090dae27882a66d7f638fdb?cid=9e408fab4a8c4d6096b013b572a8ab1f",
+                  "title": "Hard to Say I'm Sorry - 2007 Remaster",
+                },
+              ],
+            },
+            "37i9dQZF1DXc3KygWa1OE7": Object {
+              "image": "https://i.scdn.co/image/ab67706f00000002377cd62f388e2de7c3b2b08c",
+              "name": "Dance Classics",
+              "tracks": Array [
+                Object {
+                  "artist": "Stardust",
+                  "externalUrl": "https://open.spotify.com/track/1mv4lh1rW1K6xhxhJmEezy",
+                  "img": "https://i.scdn.co/image/ab67616d00004851b98afa12c212cbbda4f1799b",
+                  "songUrl": "https://p.scdn.co/mp3-preview/90f925424294d179199cac8cd35228061e2c5fdc?cid=9e408fab4a8c4d6096b013b572a8ab1f",
+                  "title": "Music Sounds Better With You - Radio Edit",
+                },
+              ],
+            },
+          },
+        }
+      }
+    />
+  </div>
+</div>
+`;

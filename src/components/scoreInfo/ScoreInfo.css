@@ -1,0 +1,39 @@
+.score {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    width: 190px;
+    border: 3px solid #FFFFF0;
+    border-radius: 50px;
+    color: #FFFFF0;
+    padding: 0 10px;
+    font-family: 'openSans';
+    z-index: 900;
+
+    span {
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 2px;
+        text-transform: uppercase;
+    }
+
+    .score-item {
+      height: 100%;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 130px;
+       border-right: 1px solid #FFFFF0;
+
+      &:last-child {
+          border: none;
+          width: 48px;
+          font-size: 20px;
+          display: flex;
+          justify-content: flex-end;
+      }
+    }
+  }
+
+

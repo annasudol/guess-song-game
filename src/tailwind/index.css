@@ -1,0 +1,35 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+    font-family: 'alba';
+    src: url('../assets/fonts/alba/Alba.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'albaSuper';
+    src: url('../assets/fonts/alba/AlbaSuper.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'openSans';
+    src: url('../assets/fonts/openSans/OpenSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'openSans';
+    src: url('../assets/fonts/openSans/OpenSans-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+  }
+  

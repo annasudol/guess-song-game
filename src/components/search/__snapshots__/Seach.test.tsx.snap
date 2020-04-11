@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="search ml-1 mr-1 md:flex justify-between items-center"
+>
+  <h1
+    className="font-albaSuper text-center text-orange-500 text-2xl md:text-3xl pb-2 md: pt-2"
+  >
+    let's choose the playlist
+  </h1>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="text-sm md:text-xl"
+      onChange={[Function]}
+      placeholder="Search for playlist"
+      value=""
+    />
+  </form>
+</div>
+`;

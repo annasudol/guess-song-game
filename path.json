@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "src/**/*.{js, ts,tsx}",
+                "!src/index.tsx",
+                "!src/tailwind"
+            ]
+        }
+    }
+}

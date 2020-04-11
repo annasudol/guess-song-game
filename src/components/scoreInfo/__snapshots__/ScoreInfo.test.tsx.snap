@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component ScoreInfo match snapshot 1`] = `
+<div
+  className="score"
+>
+  <div
+    className="score-item"
+  >
+    <span>
+      song
+    </span>
+    5
+     / 10
+  </div>
+  <div
+    className="score-item"
+  >
+    10
+  </div>
+</div>
+`;

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Navigation match snapshot 1`] = `
+<div
+  className="nav bg-pink-900"
+>
+  <div
+    className="container flex justify-between relative"
+  >
+    <NavLink
+      onClick={[Function]}
+      to="/playlist"
+    >
+      <Image
+        alt="logo"
+        className="mt-2"
+        size="small"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "logo.svg",
+          }
+        }
+      />
+    </NavLink>
+    <div
+      className="flex justify-between h-full w-60 mr-4"
+    >
+      <span
+        className="font-alba text-light-gray self-center text-sm md:text-lg pt-4 pr-2"
+      >
+        hello 
+        Test
+        !
+      </span>
+      <Link
+        className="font-alba text-orange-500 self-center text-sm md:text-lg pt-4 pr-2"
+        to="/scores"
+      >
+        your scores
+      </Link>
+      <ButtonLogout />
+    </div>
+  </div>
+</div>
+`;

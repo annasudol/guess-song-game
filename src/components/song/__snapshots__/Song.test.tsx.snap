@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Song match snapshot 1`] = `
+<Song
+  song={
+    Object {
+      "artist": "Madonna",
+      "externalUrl": "test",
+      "img": "test",
+      "songUrl": "example.com",
+      "title": "la bonita",
+    }
+  }
+>
+  <li
+    className="flex flex justify-start full-width mb-1 rounded-sm"
+  >
+    <div
+      className="w-3/5"
+    >
+      <h3
+        className="font-openSans text-sm text-white"
+      >
+        la bonita
+      </h3>
+    </div>
+    <div
+      className="w-1/5"
+    >
+      <h3
+        className="font-openSans text-sm text-white"
+      >
+        Madonna
+      </h3>
+    </div>
+    <div
+      className="w-1/5"
+    >
+      <Button
+        href={
+          Object {
+            "path": "test",
+            "target": true,
+          }
+        }
+      >
+        <a
+          className="btn font-alba"
+          href="test"
+          target="_blank"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-play-circle"
+          />
+        </a>
+      </Button>
+    </div>
+  </li>
+</Song>
+`;

@@ -1,0 +1,18 @@
+.btn--shake {
+  &:active {
+    transform: none;
+    background: transparent;
+    outline: none;
+    color: #ECC94B;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-name: wrongAnswer;
+  }
+}
+
+@keyframes wrongAnswer {
+  0%   {transform:translate(0px);}
+  33%  {transform:translate(17px);}
+  66%  {transform:translate(-17px);}
+  100% {transform:translate(0px);}
+}
