@@ -9,7 +9,7 @@ export interface AlertProps {
 
 export const Alert: FunctionComponent<AlertProps> = ({ points, alert }) => {
   const badAnswer = (
-    <div className="alert--no-points">
+    <div className="alert--no-points font-alba">
       <p>{points}</p>
     </div>
   );
@@ -17,14 +17,14 @@ export const Alert: FunctionComponent<AlertProps> = ({ points, alert }) => {
     <div className="alert">
       <div className="alert_info">
         <img src={badge} alt="medal" className="medal" />
-        <p className="alert_score">{points}</p>
+        <p className="alert_score font-alba">{points}</p>
       </div>
     </div>
   );
 
   return (
     <React.Fragment>
-      {alert && points < 0 && badAnswer}
+      {alert && badAnswer}
       {points > 0 && goodAnswer}
     </React.Fragment>
   );

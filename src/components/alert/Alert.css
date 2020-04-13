@@ -13,16 +13,15 @@
     width: 100px;
     opacity: 0;
     animation: bounceIn 1s ease-in 0s 1 alternate;
-
-    p.alert_score  {
-        position: relative;
+    p  {
         font-size: 14px;
         font-weight: 500;
         color: #E9D6C9;
-        font-family: 'OpenSans';
         z-index: 300;
-        bottom: 5px;
-        right: 62.5%;
+        position: absolute;
+        left: 50%;
+        top: 48%;
+        transform: translate(-50%, -50%);
     }
     .medal{
         width: 100px;
@@ -36,7 +35,6 @@
 
   p {
       color: red;
-      font-family: 'Montserrat';
       font-size: 20px;
       font-weight: 600;
       animation: appear 1s ease-in 0s 1;
@@ -125,32 +123,31 @@
       -webkit-transform: scale3d(0.3, 0.3, 0.3);
       transform: scale3d(0.3, 0.3, 0.3);
     }
-  
+
     20% {
       -webkit-transform: scale3d(1.1, 1.1, 1.1);
       transform: scale3d(1.1, 1.1, 1.1);
     }
-  
+
     40% {
       -webkit-transform: scale3d(0.9, 0.9, 0.9);
       transform: scale3d(0.9, 0.9, 0.9);
     }
-  
+
     60% {
       opacity: 1;
       -webkit-transform: scale3d(1.03, 1.03, 1.03);
       transform: scale3d(1.03, 1.03, 1.03);
     }
-  
+
     80% {
       -webkit-transform: scale3d(0.97, 0.97, 0.97);
       transform: scale3d(0.97, 0.97, 0.97);
     }
-  
+
     to {
       opacity: 1;
       -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
     }
   }
-  
