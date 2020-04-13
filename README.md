@@ -1,7 +1,7 @@
 # Guess Song Game powered by Spotify API
 A responsive [React](http://facebook.github.io/react/index.html) Desktop app where an user play a game where while listening to songs have to choose the right song title. Each game contain 10 songs, maximum time for answer is 30 sec. For right answer an user can get 30, 20, 10 or 5 points, that depend how quickly would give answer. For wrong answer is -10 points.
 
-![](https://github.com/annasudol/guess-song-game.git/src/assets/images/captured.gif)
+![](https://github.com/annasudol/guess-song-game/blob/master/captured.gif)
 
 ## Tools
 Key tools used in this React project are:
