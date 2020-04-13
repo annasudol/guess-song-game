@@ -1,47 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Guess Song Game powered by Spotify API
+A responsive [React](http://facebook.github.io/react/index.html) app where an user cam play a game where while listening to songs have to choose the right song name. Each game contain 10 songs, maximum time for answer is 30 sec. For right answer an user can get 30, 20, 10 or 5 points, that depend how quickly would give answer. For wrong answer is -10 points.
 
-## Available Scripts
+![](https://github.com/annasudol/guess-song-game/src/assets/images/captured.gif)
 
-In the project directory, you can run:
+## Tools
+Key tools used in this React project are:
 
-### `yarn start`
+| Tool             | Description   |
+| :-------------:|--------------|
+| [React](http://facebook.github.io/react/index.html) | A JavaScript library for building user interfaces |
+| [Redux](https://redux.js.org/) | Redux is a predictable state container for JavaScript apps. |
+| [Tailwind](https://tailwindcss.com/) | Tailwind CSS is customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
+| [Craco](https://www.npmjs.com/package/@craco/craco/) | package to customize create-react-app configuration
+| [Typescript](https://www.typescriptlang.org/) | TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+| [Express](https://expressjs.com/) | Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+| [MongoDB](https://www.mongodb.com/) | MongoDB is a document database, which means it stores data in JSON-like documents.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Demo:
+[https://game-song.herokuapp.com/](https://game-song.herokuapp.com)
 
-### `yarn test`
+## Login to Spotify:
+if you don't have Spotify account, please sing in:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+|                |              |
+| email: | spottifysample321@gmail.com |
+| password:| sample
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
+## Frontend
+1. Clone the repo: `https://github.com/annasudol/guess-song-game.git`
+2. `cd guess-song-game`
+2. Install packages: `npm install`
+3. Build project and launch: `npm start`
+4. Open your browser at: `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Backend
+1. cd backend
+2. npm install
+3. npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# gong-game
-# song-game
-# song-game
