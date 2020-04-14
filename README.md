@@ -15,12 +15,7 @@ Key tools used in this React project are:
 | [Typescript](https://www.typescriptlang.org/) | TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 | [Express](https://expressjs.com/) | Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 | [MongoDB](https://www.mongodb.com/) | MongoDB is a document database, which means it stores data in JSON-like documents.
-
-## Unit test:
-| :-------------:|--------------|
-[https://enzymejs.github.io/enzyme/docs/guides/jest.html/](https://enzymejs.github.io/enzyme/docs/guides/jest.html) |
-Enzyme makes it effortless testing React components with integration and unit tests. It is a testing library by Airbnb which got introduced for component tests in React, because it offers different rendering techniques for your React components and selectors to go through your rendered output.
-
+[https://enzymejs.github.io/enzyme/docs/guides/jest.html/](https://enzymejs.github.io/enzyme/docs/guides/jest.html) | Enzyme makes it effortless testing React components with integration and unit tests. It is a testing library by Airbnb which got introduced for component tests in React, because it offers different rendering techniques for your React components and selectors to go through your rendered output.
 
 ## Demo:
 [https://game-song.herokuapp.com/](https://game-song.herokuapp.com)
