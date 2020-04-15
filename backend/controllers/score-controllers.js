@@ -26,9 +26,10 @@ const getScoreByUserId = async (req, res, next) => {
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const recordScore = async (req, res, next) => {
-  const { userId, score, playlistId, playlistName, playlistImage, tracks } = req.body;
+  const { userId, points, playlistId } = req.body;
+  console.log(userId, points, playlistId)
 
-  const createdScore = new Score({ points: score, playlistId, playlistName, playlistImage, tracks, creator: userId });
+  const createdScore = new Score({ points, playlistId, creator: userId });
 
   let user;
   try {
@@ -84,6 +85,7 @@ const updateScore = async (req, res, next) => {
   }
 
   scoreDB.points = score;
+  scoreDB.date = Date.now();
 
   try {
     await scoreDB.save();

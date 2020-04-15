@@ -1,5 +1,5 @@
 import './Game.css';
-import { Button, ScoreInfo, Timer, Alert } from '../../components';
+import { Button, PointsInfo, Timer, Alert } from '../../components';
 import { Redirect, useParams, useLocation } from 'react-router';
 import { TrackType } from '../../state/playList/types';
 import { shuffle } from '../../utils/shuffle';
@@ -92,7 +92,7 @@ export const Game: React.FunctionComponent = () => {
       dispatch({ TYPE: 'CHANGE_POINTS', setPoints: points });
       setCurrentPoints(points);
 
-      if (songIndex < 9) {
+      if (songIndex < 1) {
         dispatch({ TYPE: 'INCREASE_INDEX' });
         resetTimer();
       } else {
@@ -111,7 +111,7 @@ export const Game: React.FunctionComponent = () => {
     <div className="container h-full">
       <div className="flex justify-center h-full items-middle full-width items-center">
         <Timer time={elapsedTime} />
-        <ScoreInfo songNr={songIndex + 1} totalScore={totalScore} />
+        <PointsInfo songNr={songIndex + 1} totalScore={totalScore} />
         <Alert points={currentPoints} alert={alert} />
       </div>
       <ReactPlayer url={song?.url} stop={end && end.toString()} playing width="0" height="0" />

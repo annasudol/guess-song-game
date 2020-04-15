@@ -1,11 +1,11 @@
-import './ScoreInfo.css';
+import './PointsInfo.css';
 import React, { FunctionComponent, ReactElement } from 'react';
 
-export interface ScoreInfoProps {
+export interface PointsInfoProps {
   totalScore: number;
   songNr: number;
 }
-export const ScoreInfo: FunctionComponent<ScoreInfoProps> = ({ totalScore, songNr }): ReactElement => (
+export const PointsInfo: FunctionComponent<PointsInfoProps> = ({ totalScore, songNr }): ReactElement => (
   <div className="score">
     <div className="score-item">
       <span>song</span>

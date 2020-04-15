@@ -45,12 +45,9 @@ export const Summary: FunctionComponent = (): ReactElement => {
           `${process.env.REACT_APP_BACKEND_URL}/score/record`,
           'POST',
           JSON.stringify({
+            points: gameScores,
             userId: user.userId,
-            playlistName,
-            score: gameScores,
             playlistId,
-            playlistImage,
-            tracks,
           }),
           {
             'Content-Type': 'application/json',

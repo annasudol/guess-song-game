@@ -9,9 +9,11 @@ export * from './navigation/Navigation';
 export * from './errorMessage/ErrorMessage';
 export * from './playlists/Playlists';
 export * from './playListItem/PlaylistItem';
-export * from './scoreInfo/ScoreInfo';
+export * from './pointsInfo/PointsInfo';
 export * from './scores/Scores';
 export * from './summary/Summary';
 export * from './search/Search';
 export * from './song/Song';
 export * from './timer/Timer';
+export * from './scoresItems/ScoresItems';
+

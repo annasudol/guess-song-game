@@ -1,43 +1,65 @@
-import { getUserInfo } from '../../state/user/selectors';
+import { getUserInfo, getToken } from '../../state/user/selectors';
 import { useSelector } from 'react-redux';
 import React, { FunctionComponent, ReactElement, useEffect, useState } from 'react';
 import { useHttpClient } from '../../hooks';
-import { groupBy } from 'lodash';
-import { PlaylistItem } from '../../components';
-import { PlayListTypes } from '../../state/playList/types';
+import { ScoresItems } from '../../components';
+
+
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+export interface ScoresDBProps {
+  date: string;
+  _id: string;
+  points: number
+  playlistId: string;
+  creator: string;
+
+}
+
+export interface ScoresDBPropsGrouped {
+  [playlistId: string]: {
+    date: string;
+    points: number;
+  }
+}
+
 export const Scores: FunctionComponent = (): ReactElement => {
   const user = useSelector(getUserInfo);
-  const [scores, setScores] = useState({});
+  const [scores, setScores] = useState<ScoresDBProps[]>([]);
   const { sendRequest, isLoading } = useHttpClient();
 
   useEffect((): void => {
     const fetchScores = async (): Promise<void> => {
       try {
         const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/score/${user.userId}`);
-        setScores(groupBy(responseData.scores, 'playlistId'));
+        setScores(responseData.scores);
       } catch (err) {
         console.warn("cannot find user's scores", err.message);
       }
     };
     fetchScores();
+
   }, [sendRequest]);
 
-  const playlistIds: string[] = Object.keys(scores);
-  const playlistItems = playlistIds?.reduce((acc: PlayListTypes[], id: string): PlayListTypes[] => {
-    return [
-      ...acc,
-      {
-        [id]: { name: scores[id][0]?.playlistName, image: scores[id][0]?.playlistImage, tracks: scores[id][0]?.tracks },
-      },
-    ];
+  const scoresGrouped = scores?.reduce((acc: ScoresDBPropsGrouped[], item: ScoresDBProps) => {
+    return [...acc, {
+      [item.playlistId]: {
+        points: item.points,
+        date: item.date,
+      }
+    }]
   }, []);
 
-  const totalScores = playlistIds?.reduce((acc: number, id: string) => {
-    return acc + scores[id][0]['points'];
+
+  const totalScores = scoresGrouped?.reduce((acc: number, item: ScoresDBPropsGrouped) => {
+    return acc + Object.values(item)[0].points;
   }, 0);
+
+  const playlistIds = scoresGrouped.reduce((acc: string[], item: ScoresDBPropsGrouped) => {
+    return [...acc, ...Object.keys(item)]
+  }, [])
+
 
   if (isLoading) {
     return (
@@ -62,32 +84,9 @@ export const Scores: FunctionComponent = (): ReactElement => {
           </div>
         </div>
       </div>
-      <div className="flex w-full w-full flex-wrap">
-        {!playlistItems.length && (
-          <h3 className="font-alba text-orange-500 text-3xl mt-10">You don&apos;t have any games records yet</h3>
-        )}
-        {playlistItems?.map((playlist: PlayListTypes, index: number) => {
-          const id = Object.keys(playlist)[0];
-          const date = scores[id][0].date;
-          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-          const name = playlist[id].name;
-          const dateFormatted = new Date(date).toLocaleDateString(undefined, options);
-          return (
-            <div className="w-full md:w-1/3 min-w-64 flex" key={index}>
-              <div className="w-1/3 max-w-24">
-                <PlaylistItem playlist={playlist} />
-              </div>
-              <div className="w-2/3 pl-4 pt-6">
-                <h3 className="font-alba text-orange-500 text-xl -mb-2">
-                  {name.length > 15 ? `${name.slice(0, 15)}...` : name}
-                </h3>
-                <span className="font-OpenSans text-light-gray text-xs opacity-50">{dateFormatted}</span>
-                <p className="font-albaSuper text-jellyBean text-2xl">{scores[id][0].points} p.</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <ScoresItems playlistIds={playlistIds} scoresDB={scoresGrouped} />
     </div>
   );
 };
+
+

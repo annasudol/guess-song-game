@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { shallow, mount, ShallowWrapper, HTMLAttributes } from 'enzyme';
 import React, { Component } from 'react';
-import { Game, Timer, ScoreInfo, Summary } from '../../components';
+import { Game, Timer, PointsInfo, Summary } from '../../components';
 import * as redux from 'react-redux';
 import * as router from 'react-router';
 import { renderHook } from '@testing-library/react-hooks';
@@ -338,7 +338,7 @@ describe('component', (): void => {
 
       it('score info component', (): void => {
         const wrapper = shallow(<Game />);
-        expect(wrapper.containsMatchingElement(<ScoreInfo songNr={1} totalScore={0} />)).toEqual(true);
+        expect(wrapper.containsMatchingElement(<PointsInfo songNr={1} totalScore={0} />)).toEqual(true);
       });
 
       it('react player with correct url', (): void => {
