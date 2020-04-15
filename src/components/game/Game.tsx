@@ -92,7 +92,7 @@ export const Game: React.FunctionComponent = () => {
       dispatch({ TYPE: 'CHANGE_POINTS', setPoints: points });
       setCurrentPoints(points);
 
-      if (songIndex < 1) {
+      if (songIndex < 9) {
         dispatch({ TYPE: 'INCREASE_INDEX' });
         resetTimer();
       } else {

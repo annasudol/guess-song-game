@@ -1,10 +1,8 @@
-import { getUserInfo, getToken } from '../../state/user/selectors';
+import { getUserInfo } from '../../state/user/selectors';
 import { useSelector } from 'react-redux';
 import React, { FunctionComponent, ReactElement, useEffect, useState } from 'react';
 import { useHttpClient } from '../../hooks';
 import { ScoresItems } from '../../components';
-
-
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 

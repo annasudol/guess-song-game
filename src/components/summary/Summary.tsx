@@ -18,18 +18,18 @@ export const Summary: FunctionComponent = (): ReactElement => {
   const user = useSelector(getUserInfo);
   const playListData: PlayListTypes = useSelector(getPlaylistData);
   const { sendRequest } = useHttpClient();
-  const playlistName: string = playListData[playlistId]?.name;
-  const playlistImage: string = playListData[playlistId]?.image;
+
   const tracks: TrackType[] = playListData[playlistId]?.tracks;
   const [message, setMessage] = useState<string>('');
   const [scores, setScores] = useState({});
   const playlist = scores[playlistId];
 
+
   useEffect(() => {
     const fetchScores = async (): Promise<void> => {
       try {
-        const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}score/${user.userId}`);
-        console.log(responseData);
+        const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/score/${user.userId}`);
+
         setScores(groupBy(responseData.scores, 'playlistId'));
       } catch (err) {
         console.warn(`cannot find user's scores, `, err.message);
