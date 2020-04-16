@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { TrackType, PlayListItemsTypes, PlayListTypes } from "../state/playList/types";
+import { TrackType, PlayListTypes } from "../state/playList/types";
 
 
 
@@ -18,9 +18,11 @@ export const useFetchPlaylist = (playlistIds: string[], token: string) => {
 
                 const response = await fetch(url);
                 const responseData = await response.json();
-                if (responseData.error) {
-                    return setError(true)
+                if (!responseData.ok) {
+                    setError(true);
+                    throw new Error(responseData.message);
                 }
+
                 const tracks = responseData.tracks?.items?.reduce((acc: TrackType[], item: any): TrackType[] => {
                     if (item?.track.preview_url) {
                         const img = item.track.album.images[2].url;
@@ -49,7 +51,6 @@ export const useFetchPlaylist = (playlistIds: string[], token: string) => {
                         tracks,
                     },
                 }
-                console.log(responseData, "playlistInfoData")
                 setPlaylistInfo([...playlistInfo, playlistInfoData])
             } catch (err) {
                 console.warn("cannot find user's scores", err.message);

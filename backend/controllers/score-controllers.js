@@ -27,7 +27,6 @@ const getScoreByUserId = async (req, res, next) => {
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const recordScore = async (req, res, next) => {
   const { userId, points, playlistId } = req.body;
-  console.log(userId, points, playlistId)
 
   const createdScore = new Score({ points, playlistId, creator: userId });
 
