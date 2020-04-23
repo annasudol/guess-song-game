@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "40e387001daf8571a8d0",
+    "revision": "ff5e797a3c6bcd7a9b55",
     "url": "/guess-song-game/static/css/main.3092d7c7.chunk.css"
   },
   {
-    "revision": "40e387001daf8571a8d0",
-    "url": "/guess-song-game/static/js/main.f36fcc59.chunk.js"
+    "revision": "ff5e797a3c6bcd7a9b55",
+    "url": "/guess-song-game/static/js/main.149e1a24.chunk.js"
   },
   {
     "revision": "a6ba5f47967f19e9177f",
@@ -40,15 +40,15 @@ self.__precacheManifest = [
     "url": "/guess-song-game/static/media/medal-icon.bc130bad.svg"
   },
   {
-    "revision": "dea9a7736d8f0694099df67a0be05e2c",
-    "url": "/guess-song-game/static/media/Alba.dea9a773.woff"
-  },
-  {
     "revision": "d2a4717e921a178a0e2b149cb823bcfe",
     "url": "/guess-song-game/static/media/AlbaSuper.d2a4717e.woff"
   },
   {
-    "revision": "2c205442eb0002a6d4639ef33e0b9aa5",
+    "revision": "dea9a7736d8f0694099df67a0be05e2c",
+    "url": "/guess-song-game/static/media/Alba.dea9a773.woff"
+  },
+  {
+    "revision": "8a0520b1a2048c5ddd4b963114a0d043",
     "url": "/guess-song-game/index.html"
   }
 ];
