@@ -8,9 +8,11 @@
     "build": "craco build",
     "test": "craco test",
     "coverage": "craco test --coverage",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "homepage": "https://game-song.herokuapp.com/",
+  "homepage": "https://annasudol.github.io/guess-song-game",
   "bugs": {
     "url": "https://github.com/annasudol/guess-song-game/issues"
   },
