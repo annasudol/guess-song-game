@@ -12,7 +12,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://annasudol.github.io/guess-song-game",
+  "homepage": "https://annasudol.github.io/guess-song-game/",
   "bugs": {
     "url": "https://github.com/annasudol/guess-song-game/issues"
   },
