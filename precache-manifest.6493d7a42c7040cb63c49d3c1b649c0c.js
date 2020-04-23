@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ff5e797a3c6bcd7a9b55",
+    "revision": "77c71c81b8a34bb2c078",
     "url": "/guess-song-game/static/css/main.3092d7c7.chunk.css"
   },
   {
-    "revision": "ff5e797a3c6bcd7a9b55",
-    "url": "/guess-song-game/static/js/main.149e1a24.chunk.js"
+    "revision": "77c71c81b8a34bb2c078",
+    "url": "/guess-song-game/static/js/main.c9250b92.chunk.js"
   },
   {
     "revision": "a6ba5f47967f19e9177f",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/guess-song-game/static/media/AlbaSuper.d2a4717e.woff"
   },
   {
-    "revision": "8a0520b1a2048c5ddd4b963114a0d043",
+    "revision": "42be67bbce28fb9d7184c69efc821d9b",
     "url": "/guess-song-game/index.html"
   }
 ];
