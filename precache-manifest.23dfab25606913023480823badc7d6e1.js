@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/guess-song-game/static/media/medal-icon.bc130bad.svg"
   },
   {
-    "revision": "d2a4717e921a178a0e2b149cb823bcfe",
-    "url": "/guess-song-game/static/media/AlbaSuper.d2a4717e.woff"
-  },
-  {
     "revision": "dea9a7736d8f0694099df67a0be05e2c",
     "url": "/guess-song-game/static/media/Alba.dea9a773.woff"
+  },
+  {
+    "revision": "d2a4717e921a178a0e2b149cb823bcfe",
+    "url": "/guess-song-game/static/media/AlbaSuper.d2a4717e.woff"
   },
   {
     "revision": "8a0520b1a2048c5ddd4b963114a0d043",

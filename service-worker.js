@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/guess-song-game/precache-manifest.2bb61bcc0fbc30d180e6c03aa03628f4.js"
+  "/guess-song-game/precache-manifest.23dfab25606913023480823badc7d6e1.js"
 );
 
 workbox.clientsClaim();
