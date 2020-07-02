@@ -18,12 +18,11 @@ Key tools used in this React project are:
 [Jest Enzyme](https://enzymejs.github.io/enzyme/docs/guides/jest.html) | Enzyme makes it effortless testing React components with integration and unit tests. It is a testing library by Airbnb which got introduced for component tests in React, because it offers different rendering techniques for your React components and selectors to go through your rendered output.
 
 ## Demo:
-[https://game-song.herokuapp.com/](https://game-song.herokuapp.com)
+[https://guess-song-game.netlify.app/](https://guess-song-game.netlify.app/)
 
 ## Login to Spotify:
 if you don't have Spotify account, please sing in:
 
-|                |              |
 | email: | spottifysample321@gmail.com |
 | password:| sample
 
@@ -31,10 +30,10 @@ if you don't have Spotify account, please sing in:
 ## Installation
 ## Frontend
 1. Clone the repo: `https://github.com/annasudol/guess-song-game.git`
-2. `cd guess-song-game`
-2. Install packages: `npm install`
-3. Build project and launch: `npm start`
-4. Open your browser at: `http://localhost:3000`
+2. `cd guess-song-game/frontend`
+3. Install packages: `npm install`
+4. Build project and launch: `npm start`
+5. Open your browser at: `http://localhost:3000`
 
 ## Backend
 1. cd backend
