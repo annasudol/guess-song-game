@@ -1,7 +1,7 @@
 {
   "name": "guess-song-game",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "This project was bootstrapped with Create React App",
   "main": "craco.config.js",
   "scripts": {
     "start": "craco start",

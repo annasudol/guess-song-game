@@ -30,7 +30,7 @@ export const Scores: FunctionComponent = (): ReactElement => {
   useEffect((): void => {
     const fetchScores = async (): Promise<void> => {
       try {
-        const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/score/${user.userId}`);
+        const responseData = await sendRequest(`http://localhost:${process.env.REACT_APP_BACKEND_PORT}/score/${user.userId}`);
         setScores(responseData.scores);
       } catch (err) {
         console.warn("cannot find user's scores", err.message);

@@ -28,7 +28,7 @@ export const Summary: FunctionComponent = (): ReactElement => {
   useEffect(() => {
     const fetchScores = async (): Promise<void> => {
       try {
-        const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/score/${user.userId}`);
+        const responseData = await sendRequest(`http://localhost:${process.env.REACT_APP_BACKEND_PORT}/score/${user.userId}`);
 
         setScores(groupBy(responseData.scores, 'playlistId'));
       } catch (err) {
@@ -42,7 +42,7 @@ export const Summary: FunctionComponent = (): ReactElement => {
     const recordScores = async (): Promise<void> => {
       try {
         await sendRequest(
-          `${process.env.REACT_APP_BACKEND_URL}/score/record`,
+          `http://localhost:${process.env.REACT_APP_BACKEND_PORT}/score/record`,
           'POST',
           JSON.stringify({
             points: gameScores,
@@ -61,7 +61,7 @@ export const Summary: FunctionComponent = (): ReactElement => {
     const updateScores = async (): Promise<void> => {
       try {
         await sendRequest(
-          `${process.env.REACT_APP_BACKEND_URL}/score/update`,
+          `http://localhost:${process.env.REACT_APP_BACKEND_PORT}/score/update`,
           'PATCH',
           JSON.stringify({
             score: gameScores,

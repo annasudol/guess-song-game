@@ -7,7 +7,7 @@ export const fetchUserDB = async (name: string, id: string) => {
   const headers = { 'Content-Type': 'application/json' };
   const method = 'POST';
   try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/app/login`, { method, body, headers });
+    const response = await fetch(`http://localhost:${process.env.REACT_APP_BACKEND_PORT}/app/login`, { method, body, headers });
 
     const responseData = await response.json();
 
