@@ -8,7 +8,7 @@ export const ScoresItems: FunctionComponent<{ playlistIds: string[], scoresDB: S
     const token = useSelector(getToken);
     const [data, setData] = useState([]);
     const { playlistInfo, error } = useFetchPlaylist(playlistIds, token);
-    
+
     useEffect(() => {
         !error && setData([...data, ...playlistInfo]);
     }, [playlistInfo, error]);

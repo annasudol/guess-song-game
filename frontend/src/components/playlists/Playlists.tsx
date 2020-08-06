@@ -21,10 +21,8 @@ export const Playlists: FunctionComponent = (): ReactElement => {
       Object.keys(playListData).reduce((acc, id: string): [] | PlayListTypes[] => {
         if (id !== 'loading' && id !== 'isError') {
           const info = playListData[id];
-
           return [...acc, { [id]: info }];
         }
-
         return [...acc];
       }, [])
     );

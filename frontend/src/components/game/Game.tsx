@@ -21,7 +21,7 @@ interface SongTypes {
 }
 
 export const Game: React.FunctionComponent = () => {
-  const { playlistID } = useParams();
+  const { playlistID } = useParams<{playlistID: string}>();
   const location: LocationTypes = useLocation();
   const gameSongs: TrackType[] = location?.state.songs;
   const tracks: TrackType[] = location?.state.tracks;
