@@ -39,7 +39,6 @@ export const Scores: FunctionComponent = (): ReactElement => {
     fetchScores();
 
   }, [sendRequest]);
-
   const scoresGrouped = scores?.reduce((acc: ScoresDBPropsGrouped[], item: ScoresDBProps) => {
     return [...acc, {
       [item.playlistId]: {

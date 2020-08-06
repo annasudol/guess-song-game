@@ -5,7 +5,6 @@ const User = require('../models/user');
 const Score = require('../models/score');
 const mongoose = require('mongoose');
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const getScoreByUserId = async (req, res, next) => {
   const userId = req.params.uid;
 
@@ -17,6 +16,7 @@ const getScoreByUserId = async (req, res, next) => {
     return next(error);
   }
 
+
   if (!userWithScores || userWithScores.scores.length === 0) {
     return next(new HttpError('No Scores', 404));
   }
@@ -24,7 +24,6 @@ const getScoreByUserId = async (req, res, next) => {
   res.json({ scores: userWithScores.scores.map(score => score.toObject({ getters: true })) });
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const recordScore = async (req, res, next) => {
   const { userId, points, playlistId } = req.body;
 
@@ -71,7 +70,6 @@ const recordScore = async (req, res, next) => {
   }
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const updateScore = async (req, res, next) => {
   const { playlistId, score } = req.body;
 

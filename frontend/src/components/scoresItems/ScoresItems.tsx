@@ -8,7 +8,7 @@ export const ScoresItems: FunctionComponent<{ playlistIds: string[], scoresDB: S
     const token = useSelector(getToken);
     const [data, setData] = useState([]);
     const { playlistInfo, error } = useFetchPlaylist(playlistIds, token);
-
+    
     useEffect(() => {
         !error && setData([...data, ...playlistInfo]);
     }, [playlistInfo, error]);
@@ -17,8 +17,9 @@ export const ScoresItems: FunctionComponent<{ playlistIds: string[], scoresDB: S
         return (<ErrorMessage message="ups..., Error, something went wrong" />)
     }
 
+
     return (
-        <div className="flex w-full w-full flex-wrap">
+        <div className="flex w-full flex-wrap">
             {!scoresDB.length && (
                 <h3 className="font-alba text-orange-500 text-3xl mt-10">You don&apos;t have any games records yet</h3>
             )}

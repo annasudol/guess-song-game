@@ -6,7 +6,6 @@ import { TrackType, PlayListTypes } from "../state/playList/types";
 export const useFetchPlaylist = (playlistIds: string[], token: string) => {
     const [playlistInfo, setPlaylistInfo] = useState<PlayListTypes[]>([]);
     const [error, setError] = useState(false);
-
     useEffect((): void => {
         const fetchPlaylistData = async (id: string, token: string): Promise<any> => {
             try {
@@ -18,15 +17,12 @@ export const useFetchPlaylist = (playlistIds: string[], token: string) => {
 
                 const response = await fetch(url);
                 const responseData = await response.json();
-                if (!responseData.ok) {
-                    setError(true);
-                    throw new Error(responseData.message);
-                }
 
                 const tracks = responseData.tracks?.items?.reduce((acc: TrackType[], item: any): TrackType[] => {
                     if (item?.track.preview_url) {
                         const img = item.track.album.images[2].url;
                         const artist = item.track.artists.map((artist: { name: string }) => artist.name).join(', ');
+
 
                         const externalUrl = item.track.external_urls.spotify;
                         const title = item.track.name;
@@ -37,7 +33,6 @@ export const useFetchPlaylist = (playlistIds: string[], token: string) => {
                             songUrl: item.track.preview_url,
                             title,
                         };
-
                         return [...acc, track];
                     }
 
