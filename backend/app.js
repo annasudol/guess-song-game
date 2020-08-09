@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-var-requires */
 const dotenv = require('dotenv');
 const express = require('express');
 const app = express();
@@ -12,7 +9,6 @@ const connectDB = require('./config/db');
 const HttpError = require('./models/http-error');
 
 dotenv.config({ path: './config/config.env' });
-
 
 
 //Body parser
