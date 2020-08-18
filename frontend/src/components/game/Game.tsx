@@ -54,7 +54,6 @@ export const Game: React.FunctionComponent = () => {
           ? [...acc, item.title]
           : [...acc];
       }, []);
-      const answers: string[] = shuffle([goodAnswer, ...bad9Answers]);
       return { bad9Answers, gameSongs, goodAnswer, url };
     }
 
@@ -104,7 +103,7 @@ export const Game: React.FunctionComponent = () => {
   if (end) {
     return <Redirect to={AppRoutes.Summary} />;
   }
-  const answers = [...song.bad9Answers, song.goodAnswer]
+const answers: string[] = shuffle([...song.bad9Answers, song.goodAnswer]);
   return (
     <div className="container h-full">
       <div className="flex justify-center h-full items-middle full-width items-center">
