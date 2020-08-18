@@ -16,7 +16,6 @@ interface SongTypes {
   goodAnswer: string;
   bad9Answers: string[];
   url: string;
-  answers: string[];
   gameSongs: TrackType[];
 }
 
@@ -56,14 +55,13 @@ export const Game: React.FunctionComponent = () => {
           : [...acc];
       }, []);
       const answers: string[] = shuffle([goodAnswer, ...bad9Answers]);
-      return { answers, bad9Answers, gameSongs, goodAnswer, url };
+      return { bad9Answers, gameSongs, goodAnswer, url };
     }
 
     return {
-      answers: [],
       bad9Answers: [],
-      gameSongs: [],
       goodAnswer: '',
+      gameSongs: [],
       url: '',
     };
   }, [playlistID, songIndex, gameSongs]);
@@ -106,7 +104,7 @@ export const Game: React.FunctionComponent = () => {
   if (end) {
     return <Redirect to={AppRoutes.Summary} />;
   }
-
+  const answers = [...song.bad9Answers, song.goodAnswer]
   return (
     <div className="container h-full">
       <div className="flex justify-center h-full items-middle full-width items-center">
@@ -116,7 +114,7 @@ export const Game: React.FunctionComponent = () => {
       </div>
       <ReactPlayer url={song?.url} stop={end && end.toString()} playing width="0" height="0" />
       <div className="game flex justify-between align-top flex-wrap min-h-64 w-full">
-        {song?.answers.map((answer: string, index: number) => (
+        {answers.map((answer: string, index: number) => (
           <Button
             mainBtn
             key={index}
