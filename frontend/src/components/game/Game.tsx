@@ -113,7 +113,7 @@ export const Game: React.FunctionComponent = () => {
         <PointsInfoMemorized songNr={songIndex + 1} totalScore={totalScore} />
         <AlertMemorized points={currentPoints} alert={alert} />
       </div>
-      <ReactPlayer url={song?.url} playing width="0" height="0" />
+      <ReactPlayer url={song.url} playing width="0" height="0" />
       <div className="game flex justify-between align-top flex-wrap min-h-64 w-full">
         {song?.shuffledAnswers.map((answer: string, index: number) => (
           <Button
