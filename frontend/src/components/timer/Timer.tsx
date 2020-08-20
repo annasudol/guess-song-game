@@ -10,3 +10,4 @@ export const Timer: FunctionComponent<TimerProps> = ({ time }): ReactElement => 
 
   return <div className={`timer ${time > 20 ? 'animated red' : ''}`}> 00 : {remain}</div>;
 };
+export const TimerMemorized = React.memo(Timer);

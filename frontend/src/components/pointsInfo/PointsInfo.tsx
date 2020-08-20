@@ -13,4 +13,6 @@ export const PointsInfo: FunctionComponent<PointsInfoProps> = ({ totalScore, son
     </div>
     <div className="score-item">{totalScore}</div>
   </div>
-);
+)
+
+export const PointsInfoMemorized = React.memo(PointsInfo);

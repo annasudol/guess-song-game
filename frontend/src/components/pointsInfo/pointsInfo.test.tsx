@@ -1,13 +1,13 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
-import { PointsInfo } from './PointsInfo';
+import { PointsInfoMemorized } from './PointsInfo';
 import toJson from 'enzyme-to-json';
 
 describe('component', (): void => {
-  describe('PointsInfo', (): void => {
+  describe('PointsInfoMemorized', (): void => {
     it('match snapshot', (): void => {
-      const wrapper = shallow(<PointsInfo totalScore={10} songNr={5} />);
+      const wrapper = shallow(<PointsInfoMemorized totalScore={10} songNr={5} />);
 
       expect(toJson(wrapper)).toMatchSnapshot();
     });

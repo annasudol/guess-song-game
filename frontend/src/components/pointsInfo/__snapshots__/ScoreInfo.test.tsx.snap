@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`component PointsInfo match snapshot 1`] = `
+exports[`component PointsInfoMemorized match snapshot 1`] = `
 <div
   className="score"
 >

@@ -1,5 +1,5 @@
 import './Game.css';
-import { Button, PointsInfo, Timer, Alert } from '../../components';
+import { Button, PointsInfoMemorized, TimerMemorized, AlertMemorized } from '../../components';
 import { Redirect, useParams, useLocation } from 'react-router';
 import { TrackType } from '../../state/playList/types';
 import { shuffle } from '../../utils/shuffle';
@@ -16,7 +16,7 @@ interface SongTypes {
   goodAnswer: string;
   bad9Answers: string[];
   url: string;
-  answers: string[];
+  shuffledAnswers: string[];
   gameSongs: TrackType[];
 }
 
@@ -55,12 +55,12 @@ export const Game: React.FunctionComponent = () => {
           ? [...acc, item.title]
           : [...acc];
       }, []);
-      const answers: string[] = shuffle([goodAnswer, ...bad9Answers]);
-      return { answers, bad9Answers, gameSongs, goodAnswer, url };
+      const shuffledAnswers: string[] = shuffle([goodAnswer, ...bad9Answers]);
+      return { shuffledAnswers, bad9Answers, gameSongs, goodAnswer, url };
     }
 
     return {
-      answers: [],
+      shuffledAnswers: [],
       bad9Answers: [],
       goodAnswer: '',
       gameSongs: [],
@@ -106,17 +106,16 @@ export const Game: React.FunctionComponent = () => {
   if (end) {
     return <Redirect to={AppRoutes.Summary} />;
   }
-  console.log(song?.url, song, "song?.url")
   return (
     <div className="container h-full">
       <div className="flex justify-center h-full items-middle full-width items-center">
-        <Timer time={elapsedTime} />
-        <PointsInfo songNr={songIndex + 1} totalScore={totalScore} />
-        <Alert points={currentPoints} alert={alert} />
+        <TimerMemorized time={elapsedTime} />
+        <PointsInfoMemorized songNr={songIndex + 1} totalScore={totalScore} />
+        <AlertMemorized points={currentPoints} alert={alert} />
       </div>
-      <ReactPlayer url={song?.url} stop={end && end.toString()} playing width="0" height="0" />
+      <ReactPlayer url={song?.url} playing width="0" height="0" />
       <div className="game flex justify-between align-top flex-wrap min-h-64 w-full">
-        {song?.answers.map((answer: string, index: number) => (
+        {song?.shuffledAnswers.map((answer: string, index: number) => (
           <Button
             mainBtn
             key={index}

@@ -23,9 +23,11 @@ export const Alert: FunctionComponent<AlertProps> = ({ points, alert }) => {
   );
 
   return (
-    <React.Fragment>
+    <>
       {alert && badAnswer}
       {points > 0 && goodAnswer}
-    </React.Fragment>
+    </>
   );
 };
+export const AlertMemorized = React.memo(Alert);
+
