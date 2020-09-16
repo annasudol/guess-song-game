@@ -2,7 +2,7 @@
 
 exports[`component ErrorMessage match snapshot 1`] = `
 <div
-  className="flex flex justify-center items-center h-screen"
+  className="flex justify-center items-center h-screen"
 >
   <h2
     className="font-albaSuper text-orange-500 text-5xl text-center pb-4"

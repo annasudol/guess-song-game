@@ -91,7 +91,7 @@ export const Summary: FunctionComponent = (): ReactElement => {
 
   return (
     <div className="summary container">
-      <div className="flex pt-10 pt-10 w-full justify-center flex-col md:flex-row">
+      <div className="flex pt-10 w-full justify-center flex-col md:flex-row">
         <div className="order-2 md:order-1">
           <ListSongs />
         </div>

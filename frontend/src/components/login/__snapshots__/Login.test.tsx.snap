@@ -35,7 +35,7 @@ exports[`component Login match snapshot 1`] = `
     <Button
       href={
         Object {
-          "path": "https://accounts.spotify.com/authorize?client_id=9e408fab4a8c4d6096b013b572a8ab1f&redirect_uri=http://localhost:3000/playlist&scope=user-top-read%20user-read-currently-playing%20user-read-playback-state&response_type=token&show_dialog=true",
+          "path": "https://accounts.spotify.com/authorize?client_id=9263ccade7b6492f99ea2a074ac4ee71&redirect_uri=http://localhost:3000/playlist/&scope=user-top-read%20user-read-currently-playing%20user-read-playback-state&response_type=token&show_dialog=true",
         }
       }
       spacing={

@@ -58,6 +58,7 @@ export const Game: React.FunctionComponent = () => {
       const shuffledAnswers: string[] = shuffle([goodAnswer, ...bad9Answers]);
       return { shuffledAnswers, bad9Answers, gameSongs, goodAnswer, url };
     }
+  
 
     return {
       shuffledAnswers: [],

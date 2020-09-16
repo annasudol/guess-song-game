@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Scores match snapshot 1`] = `
+<div
+  className="container pt-10"
+>
+  <div
+    className="flex justify-between align-top full-width"
+  >
+    <h2
+      className="font-albaSuper text-jellyBean self-top text-2xl"
+    >
+      hello 
+      !
+    </h2>
+    <div
+      className="flex justify-end w-2/5"
+    >
+      <div
+        className="text-right mr-4"
+      >
+        <h3
+          className="font-alba text-jellyBean text-3xl -mb-2"
+        >
+          0
+        </h3>
+        <p
+          className="font-OpenSans text-light-gray text-xs opacity-50"
+        >
+          Total Games
+        </p>
+      </div>
+      <div
+        className="text-right"
+      >
+        <h3
+          className="font-alba text-jellyBean text-3xl -mb-2"
+        >
+          0
+        </h3>
+        <p
+          className="font-OpenSans text-light-gray text-xs opacity-50"
+        >
+          Total Points
+        </p>
+      </div>
+    </div>
+  </div>
+  <ScoresItems
+    playlistIds={Array []}
+    scoresDB={Array []}
+  />
+</div>
+`;

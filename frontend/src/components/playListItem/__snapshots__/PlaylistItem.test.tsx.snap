@@ -10,18 +10,18 @@ exports[`component PlaylistItem match snapshot 1`] = `
       "state": Object {
         "songs": Array [
           Object {
-            "artist": "Take That",
-            "externalUrl": "https://open.spotify.com/track/24fQpRwKFkC3Fe8QtvvrNw",
-            "img": "https://i.scdn.co/image/ab67616d000048514d30d662454d239ed12fe963",
-            "songUrl": "https://p.scdn.co/mp3-preview/8f9085faa29895e3eb68da902f2ba0d6ad180ddc?cid=9e408fab4a8c4d6096b013b572a8ab1f",
-            "title": "Back for Good - Radio Mix",
-          },
-          Object {
             "artist": "Cher",
             "externalUrl": "https://open.spotify.com/track/60Pwcnt2y9ML9VP4gwrcxm",
             "img": "https://i.scdn.co/image/ab67616d000048511cafae5c9e0e809317d46a31",
             "songUrl": "https://p.scdn.co/mp3-preview/d21",
             "title": "Walking in Memphis",
+          },
+          Object {
+            "artist": "Take That",
+            "externalUrl": "https://open.spotify.com/track/24fQpRwKFkC3Fe8QtvvrNw",
+            "img": "https://i.scdn.co/image/ab67616d000048514d30d662454d239ed12fe963",
+            "songUrl": "https://p.scdn.co/mp3-preview/8f9085faa29895e3eb68da902f2ba0d6ad180ddc?cid=9e408fab4a8c4d6096b013b572a8ab1f",
+            "title": "Back for Good - Radio Mix",
           },
         ],
         "tracks": Array [

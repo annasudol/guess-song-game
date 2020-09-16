@@ -13,7 +13,7 @@ exports[`component Song match snapshot 1`] = `
   }
 >
   <li
-    className="flex flex justify-start full-width mb-1 rounded-sm"
+    className="flex justify-start full-width mb-1 rounded-sm"
   >
     <div
       className="w-3/5"

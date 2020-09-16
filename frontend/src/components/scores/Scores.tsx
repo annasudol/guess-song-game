@@ -9,17 +9,16 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 export interface ScoresDBProps {
   date: string;
   _id: string;
-  points: number
+  points: number;
   playlistId: string;
   creator: string;
-
 }
 
 export interface ScoresDBPropsGrouped {
   [playlistId: string]: {
     date: string;
     points: number;
-  }
+  };
 }
 
 export const Scores: FunctionComponent = (): ReactElement => {
@@ -37,47 +36,47 @@ export const Scores: FunctionComponent = (): ReactElement => {
       }
     };
     fetchScores();
-
   }, [sendRequest]);
   const scoresGrouped = scores?.reduce((acc: ScoresDBPropsGrouped[], item: ScoresDBProps) => {
-    return [...acc, {
-      [item.playlistId]: {
-        points: item.points,
-        date: item.date,
-      }
-    }]
+    return [
+      ...acc,
+      {
+        [item.playlistId]: {
+          points: item.points,
+          date: item.date,
+        },
+      },
+    ];
   }, []);
-
 
   const totalScores = scoresGrouped?.reduce((acc: number, item: ScoresDBPropsGrouped) => {
     return acc + Object.values(item)[0].points;
   }, 0);
 
   const playlistIds = scoresGrouped.reduce((acc: string[], item: ScoresDBPropsGrouped) => {
-    return [...acc, ...Object.keys(item)]
-  }, [])
-
+    return [...acc, ...Object.keys(item)];
+  }, []);
 
   if (isLoading) {
     return (
-      <div className="container flex justify-center items-center full-width h-full mt-20">
-        <CircularProgress size={100} color="secondary" />
+      <div className='container flex justify-center items-center full-width h-full mt-20'>
+        <CircularProgress size={100} color='secondary' />
       </div>
     );
   }
 
   return (
-    <div className="container pt-10">
-      <div className="flex justify-between align-top full-width">
-        <h2 className="font-albaSuper text-jellyBean self-top text-2xl">hello {user.name}!</h2>
-        <div className="flex justify-end w-2/5">
-          <div className="text-right mr-4">
-            <h2 className="font-alba text-jellyBean text-3xl -mb-2">{playlistIds?.length ? playlistIds?.length : 0}</h2>
-            <p className="font-OpenSans text-light-gray text-xs opacity-50">Total Games</p>
+    <div className='container pt-10'>
+      <div className='flex justify-between align-top full-width'>
+        <h2 className='font-albaSuper text-jellyBean self-top text-2xl'>hello {user.name}!</h2>
+        <div className='flex justify-end w-2/5'>
+          <div className='text-right mr-4'>
+            <h3 className='font-alba text-jellyBean text-3xl -mb-2'>{playlistIds?.length ? playlistIds?.length : 0}</h3>
+            <p className='font-OpenSans text-light-gray text-xs opacity-50'>Total Games</p>
           </div>
-          <div className="text-right">
-            <h2 className="font-alba text-jellyBean text-3xl -mb-2">{totalScores}</h2>
-            <p className="font-OpenSans text-light-gray text-xs opacity-50">Total Points</p>
+          <div className='text-right'>
+            <h3 className='font-alba text-jellyBean text-3xl -mb-2'>{totalScores}</h3>
+            <p className='font-OpenSans text-light-gray text-xs opacity-50'>Total Points</p>
           </div>
         </div>
       </div>
@@ -85,5 +84,3 @@ export const Scores: FunctionComponent = (): ReactElement => {
     </div>
   );
 };
-
-

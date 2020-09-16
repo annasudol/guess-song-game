@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component ScoresItems match snapshot 1`] = `
+<div
+  className="flex w-full flex-wrap"
+>
+  <div
+    className="w-full md:w-1/3 min-w-64 flex"
+    key="2GiFTnxorbfpgrXJYek2hv"
+  >
+    <div
+      className="w-1/3 max-w-24"
+    />
+    <div
+      className="w-2/3 pl-4 pt-6"
+    >
+      <h3
+        className="font-alba text-orange-500 text-xl -mb-2"
+      />
+      <span
+        className="font-OpenSans text-light-gray text-xs opacity-50"
+      >
+        Wednesday, 15 April 2020
+      </span>
+      <p
+        className="font-albaSuper text-jellyBean text-2xl"
+      >
+        -30
+         p.
+      </p>
+    </div>
+  </div>
+  <div
+    className="w-full md:w-1/3 min-w-64 flex"
+    key="37i9dQZF1DXc3KygMa1OE7"
+  >
+    <div
+      className="w-1/3 max-w-24"
+    />
+    <div
+      className="w-2/3 pl-4 pt-6"
+    >
+      <h3
+        className="font-alba text-orange-500 text-xl -mb-2"
+      />
+      <span
+        className="font-OpenSans text-light-gray text-xs opacity-50"
+      >
+        Wednesday, 15 April 2020
+      </span>
+      <p
+        className="font-albaSuper text-jellyBean text-2xl"
+      >
+        -40
+         p.
+      </p>
+    </div>
+  </div>
+</div>
+`;
